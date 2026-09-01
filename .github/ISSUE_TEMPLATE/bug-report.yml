@@ -1,0 +1,53 @@
+name: Beta problem
+description: Report a reproducible setup or product issue without exposing sensitive data.
+title: "[Beta]: "
+labels:
+  - beta
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing FifthDev. Please remove API keys, OAuth codes, tokens, private source, and unredacted environment values before submitting.
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      description: Output of `npm view @cognisos/fabric-mcp@beta-candidate version`.
+      placeholder: 0.2.0-rc.56.1
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, architecture, Node.js version, and MCP client.
+      placeholder: macOS 15 arm64, Node.js 22.x, Claude Code
+    validations:
+      required: true
+  - type: textarea
+    id: action
+    attributes:
+      label: What were you trying to do?
+      description: Include the exact command or product action.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result and last successful stage
+      description: Include sanitized Doctor output when relevant.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed credentials, OAuth codes, tokens, private source, and unredacted environment values.
+          required: true

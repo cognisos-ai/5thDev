@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-labelledby="title desc">
+  <title id="title">5thDev</title>
+  <desc id="desc">Make every agent your best agent.</desc>
+  <defs>
+    <radialGradient id="ember" cx="0" cy="0" r="1" gradientTransform="translate(1075 52) rotate(132) scale(510 440)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8591A" stop-opacity=".32"/>
+      <stop offset=".52" stop-color="#E8591A" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#0A0806" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="90" y1="355" x2="1180" y2="70" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8591A" stop-opacity="0"/>
+      <stop offset=".42" stop-color="#E8591A" stop-opacity=".58"/>
+      <stop offset="1" stop-color="#FFD4BE" stop-opacity=".08"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="420" rx="28" fill="#0A0806"/>
+  <rect width="1280" height="420" rx="28" fill="url(#ember)"/>
+  <path d="M-70 390C196 226 341 350 546 226S942 51 1351 104" fill="none" stroke="url(#line)" stroke-width="2"/>
+  <path d="M-42 415C221 268 390 378 589 245S965 91 1331 123" fill="none" stroke="#E8591A" stroke-opacity=".12"/>
+  <circle cx="1064" cy="70" r="132" fill="none" stroke="#E8591A" stroke-opacity=".12"/>
+  <circle cx="1064" cy="70" r="92" fill="none" stroke="#E8591A" stroke-opacity=".16"/>
+  <circle cx="1064" cy="70" r="48" fill="#E8591A" fill-opacity=".14" filter="url(#glow)"/>
+  <g fill="#FFD4BE">
+    <circle cx="174" cy="94" r="2.2" opacity=".55"/>
+    <circle cx="246" cy="318" r="1.8" opacity=".38"/>
+    <circle cx="916" cy="290" r="2" opacity=".45"/>
+    <circle cx="1136" cy="212" r="1.6" opacity=".42"/>
+    <circle cx="760" cy="92" r="1.5" opacity=".3"/>
+  </g>
+  <text x="96" y="192" fill="#FFFFFF" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="88" font-weight="670" letter-spacing="-4">5thDev</text>
+  <rect x="97" y="223" width="54" height="4" rx="2" fill="#E8591A"/>
+  <text x="96" y="286" fill="#FFFFFF" fill-opacity=".78" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="28" font-weight="430" letter-spacing="-.4">Make every agent your best agent.</text>
+  <text x="97" y="332" fill="#FFFFFF" fill-opacity=".42" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="15" letter-spacing="1.8">CONTINUITY  ·  AUDITABILITY  ·  GOVERNANCE</text>
+</svg>

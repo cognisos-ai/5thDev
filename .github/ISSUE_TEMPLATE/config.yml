@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: FifthDev documentation
+    url: https://docs.5thdev.ai
+    about: Read product setup and usage documentation.
+  - name: Sensitive security report
+    url: https://github.com/cognisos-ai/5thDev/security/advisories/new
+    about: Privately report a suspected vulnerability.
