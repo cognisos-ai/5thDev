@@ -1,37 +1,110 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="480" viewBox="0 0 1280 480" role="img" aria-labelledby="title desc">
   <title id="title">5thDev</title>
-  <desc id="desc">Make every agent your best agent.</desc>
+  <desc id="desc">A warm, layered agent workspace showing continuity, auditability, and governance.</desc>
   <defs>
-    <radialGradient id="ember" cx="0" cy="0" r="1" gradientTransform="translate(1075 52) rotate(132) scale(510 440)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#E8591A" stop-opacity=".32"/>
-      <stop offset=".52" stop-color="#E8591A" stop-opacity=".08"/>
-      <stop offset="1" stop-color="#0A0806" stop-opacity="0"/>
+    <radialGradient id="ember" cx="0" cy="0" r="1" gradientTransform="translate(1085 44) rotate(135) scale(620 490)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8591A" stop-opacity=".34"/>
+      <stop offset=".48" stop-color="#A53D10" stop-opacity=".11"/>
+      <stop offset="1" stop-color="#090705" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="line" x1="90" y1="355" x2="1180" y2="70" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#E8591A" stop-opacity="0"/>
-      <stop offset=".42" stop-color="#E8591A" stop-opacity=".58"/>
-      <stop offset="1" stop-color="#FFD4BE" stop-opacity=".08"/>
+    <linearGradient id="panel" x1="670" y1="68" x2="1160" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#211711"/>
+      <stop offset="1" stop-color="#100C09"/>
     </linearGradient>
-    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="8"/>
+    <linearGradient id="trace" x1="68" y1="430" x2="1200" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8591A" stop-opacity="0"/>
+      <stop offset=".52" stop-color="#E8591A" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#FFD7C4" stop-opacity=".05"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#000000" flood-opacity=".42"/>
+    </filter>
+    <filter id="soft" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="12"/>
     </filter>
   </defs>
-  <rect width="1280" height="420" rx="28" fill="#0A0806"/>
-  <rect width="1280" height="420" rx="28" fill="url(#ember)"/>
-  <path d="M-70 390C196 226 341 350 546 226S942 51 1351 104" fill="none" stroke="url(#line)" stroke-width="2"/>
-  <path d="M-42 415C221 268 390 378 589 245S965 91 1331 123" fill="none" stroke="#E8591A" stroke-opacity=".12"/>
-  <circle cx="1064" cy="70" r="132" fill="none" stroke="#E8591A" stroke-opacity=".12"/>
-  <circle cx="1064" cy="70" r="92" fill="none" stroke="#E8591A" stroke-opacity=".16"/>
-  <circle cx="1064" cy="70" r="48" fill="#E8591A" fill-opacity=".14" filter="url(#glow)"/>
-  <g fill="#FFD4BE">
-    <circle cx="174" cy="94" r="2.2" opacity=".55"/>
-    <circle cx="246" cy="318" r="1.8" opacity=".38"/>
-    <circle cx="916" cy="290" r="2" opacity=".45"/>
-    <circle cx="1136" cy="212" r="1.6" opacity=".42"/>
-    <circle cx="760" cy="92" r="1.5" opacity=".3"/>
+
+  <rect width="1280" height="480" rx="30" fill="#090705"/>
+  <rect width="1280" height="480" rx="30" fill="url(#ember)"/>
+  <path d="M-60 454C201 276 383 416 581 260S968 54 1352 102" fill="none" stroke="url(#trace)" stroke-width="2"/>
+  <path d="M-20 476C241 322 408 431 612 286S995 92 1330 122" fill="none" stroke="#E8591A" stroke-opacity=".11"/>
+  <circle cx="1102" cy="36" r="142" fill="none" stroke="#E8591A" stroke-opacity=".11"/>
+  <circle cx="1102" cy="36" r="96" fill="none" stroke="#FFD7C4" stroke-opacity=".08"/>
+  <circle cx="1102" cy="36" r="34" fill="#E8591A" fill-opacity=".22" filter="url(#soft)"/>
+
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <g>
+      <rect x="70" y="58" width="42" height="42" rx="13" fill="#E8591A"/>
+      <path d="M82 80c8-12 17-12 24 0-7 11-16 11-24 0Z" fill="none" stroke="#FFF5EF" stroke-width="2"/>
+      <circle cx="94" cy="80" r="3" fill="#FFF5EF"/>
+      <text x="126" y="89" fill="#FFF8F4" font-size="26" font-weight="650" letter-spacing="-.8">5thDev</text>
+    </g>
+
+    <text x="70" y="190" fill="#FFFFFF" font-size="62" font-weight="650" letter-spacing="-3">Make every agent</text>
+    <text x="70" y="255" fill="#FFFFFF" font-size="62" font-weight="650" letter-spacing="-3">your best agent.</text>
+    <rect x="72" y="282" width="56" height="4" rx="2" fill="#E8591A"/>
+    <text x="70" y="329" fill="#FFFFFF" fill-opacity=".64" font-size="18">A reliability layer for work that outlives one session.</text>
+
+    <g transform="translate(70 365)">
+      <rect width="438" height="48" rx="14" fill="#FFFFFF" fill-opacity=".045" stroke="#FFFFFF" stroke-opacity=".11"/>
+      <circle cx="23" cy="24" r="5" fill="#E8591A"/>
+      <text x="41" y="29" fill="#FFF4ED" fill-opacity=".72" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13">npx … @beta-candidate setup</text>
+      <rect x="355" y="11" width="70" height="26" rx="9" fill="#E8591A" fill-opacity=".12" stroke="#E8591A" stroke-opacity=".34"/>
+      <text x="372" y="29" fill="#FF9A68" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" letter-spacing="1.2">PUBLIC BETA</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="640" y="74" width="558" height="348" rx="22" fill="url(#panel)" stroke="#FFFFFF" stroke-opacity=".13"/>
+      <path d="M640 126H1198" stroke="#FFFFFF" stroke-opacity=".08"/>
+      <circle cx="670" cy="100" r="5" fill="#E8591A"/>
+      <circle cx="688" cy="100" r="5" fill="#FFB186" fill-opacity=".34"/>
+      <circle cx="706" cy="100" r="5" fill="#FFF5EF" fill-opacity=".18"/>
+      <text x="736" y="105" fill="#FFF5EF" fill-opacity=".55" font-size="11" font-weight="600" letter-spacing="1.4">AGENT WORKSPACE</text>
+      <rect x="1090" y="87" width="82" height="26" rx="9" fill="#6DD4A8" fill-opacity=".08" stroke="#6DD4A8" stroke-opacity=".26"/>
+      <circle cx="1107" cy="100" r="3.5" fill="#6DD4A8"/>
+      <text x="1118" y="104" fill="#A8E8CD" font-size="9" font-weight="650" letter-spacing="1.1">IN SYNC</text>
+
+      <text x="670" y="159" fill="#FFFFFF" fill-opacity=".35" font-size="10" font-weight="650" letter-spacing="1.4">CURRENT WORK</text>
+      <text x="670" y="187" fill="#FFF8F4" font-size="20" font-weight="590">Ship the connector without losing context</text>
+      <text x="670" y="211" fill="#FFFFFF" fill-opacity=".42" font-size="12">Shared project state · 3 agents · exact evidence attached</text>
+
+      <g transform="translate(670 236)">
+        <rect width="154" height="104" rx="15" fill="#FFFFFF" fill-opacity=".035" stroke="#FFFFFF" stroke-opacity=".09"/>
+        <circle cx="25" cy="24" r="8" fill="#E8591A" fill-opacity=".18"/>
+        <path d="M21 24h8M25 20v8" stroke="#FF9A68" stroke-width="1.4" stroke-linecap="round"/>
+        <text x="43" y="28" fill="#FFFFFF" fill-opacity=".44" font-size="9" font-weight="650" letter-spacing="1.2">CONTEXT</text>
+        <text x="18" y="62" fill="#FFF8F4" font-size="18" font-weight="590">Fresh</text>
+        <text x="18" y="83" fill="#FFFFFF" fill-opacity=".36" font-size="10">Project graph updated</text>
+      </g>
+
+      <g transform="translate(836 236)">
+        <rect width="154" height="104" rx="15" fill="#FFFFFF" fill-opacity=".035" stroke="#FFFFFF" stroke-opacity=".09"/>
+        <circle cx="25" cy="24" r="8" fill="#E8591A" fill-opacity=".18"/>
+        <path d="m21 24 3 3 6-7" fill="none" stroke="#FF9A68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="43" y="28" fill="#FFFFFF" fill-opacity=".44" font-size="9" font-weight="650" letter-spacing="1.2">TRACE</text>
+        <text x="18" y="62" fill="#FFF8F4" font-size="18" font-weight="590">Recorded</text>
+        <text x="18" y="83" fill="#FFFFFF" fill-opacity=".36" font-size="10">Actions carry evidence</text>
+      </g>
+
+      <g transform="translate(1002 236)">
+        <rect width="170" height="104" rx="15" fill="#E8591A" fill-opacity=".065" stroke="#E8591A" stroke-opacity=".2"/>
+        <circle cx="25" cy="24" r="8" fill="#E8591A" fill-opacity=".2"/>
+        <path d="M25 18.5 30 21v4c0 3-2.2 5.2-5 6.2-2.8-1-5-3.2-5-6.2v-4l5-2.5Z" fill="none" stroke="#FF9A68" stroke-width="1.3"/>
+        <text x="43" y="28" fill="#FFFFFF" fill-opacity=".44" font-size="9" font-weight="650" letter-spacing="1.2">POLICY</text>
+        <text x="18" y="62" fill="#FFF8F4" font-size="18" font-weight="590">Governed</text>
+        <text x="18" y="83" fill="#FFFFFF" fill-opacity=".36" font-size="10">Rules travel with work</text>
+      </g>
+
+      <g transform="translate(670 365)">
+        <circle cx="6" cy="6" r="6" fill="#E8591A"/>
+        <path d="M20 6H478" stroke="#FFFFFF" stroke-opacity=".08"/>
+        <circle cx="183" cy="6" r="4" fill="#FF9A68"/>
+        <circle cx="352" cy="6" r="4" fill="#FFF5EF" fill-opacity=".42"/>
+        <circle cx="498" cy="6" r="4" fill="#6DD4A8"/>
+        <text x="0" y="31" fill="#FFFFFF" fill-opacity=".34" font-size="9" letter-spacing="1.15">CONTINUITY</text>
+        <text x="163" y="31" fill="#FFFFFF" fill-opacity=".34" font-size="9" letter-spacing="1.15">AUDITABILITY</text>
+        <text x="344" y="31" fill="#FFFFFF" fill-opacity=".34" font-size="9" letter-spacing="1.15">GOVERNANCE</text>
+      </g>
+    </g>
   </g>
-  <text x="96" y="192" fill="#FFFFFF" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="88" font-weight="670" letter-spacing="-4">5thDev</text>
-  <rect x="97" y="223" width="54" height="4" rx="2" fill="#E8591A"/>
-  <text x="96" y="286" fill="#FFFFFF" fill-opacity=".78" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="28" font-weight="430" letter-spacing="-.4">Make every agent your best agent.</text>
-  <text x="97" y="332" fill="#FFFFFF" fill-opacity=".42" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="15" letter-spacing="1.8">CONTINUITY  ·  AUDITABILITY  ·  GOVERNANCE</text>
 </svg>

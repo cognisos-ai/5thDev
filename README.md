@@ -3,10 +3,10 @@
 </p>
 
 <p align="center">
-  <a href="https://5thdev.ai">Website</a> ·
-  <a href="https://docs.5thdev.ai">Docs</a> ·
+  <a href="https://5thdev.ai">Website ↗</a> ·
+  <a href="https://docs.5thdev.ai">Docs ↗</a> ·
   <a href="#try-the-local-beta">Try the beta</a> ·
-  <a href="https://github.com/cognisos-ai/5thDev/issues">Feedback</a>
+  <a href="https://github.com/cognisos-ai/5thDev/issues">Feedback ↗</a>
 </p>
 
 Agents are remarkably capable. The hard part is keeping them grounded when the
