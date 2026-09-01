@@ -1,5 +1,11 @@
 <p align="center">
-  <img src="./assets/5thdev-github-hero.svg" alt="5thDev — Make every agent your best agent" width="100%">
+  <img src="./assets/5thdev-github-hero.png" alt="5thDev — Make every agent your best agent" width="100%">
+</p>
+
+<p align="center">
+  <a href="https://docs.5thdev.ai/"><img src="https://img.shields.io/badge/Docs-docs.5thdev.ai-FFD700?style=for-the-badge" alt="Documentation"></a>
+  <a href="https://discord.com/channels/1496699350439563347/"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
+  <a href="https://www.cognisos.ai/"><img src="https://img.shields.io/badge/Built%20by-Cognisos-blueviolet?style=for-the-badge" alt="Built by Cognisos"></a>
 </p>
 
 <p align="center">
@@ -20,6 +26,10 @@ from zero.
 This repository is the public front door for the product: what is available,
 how to try it, and where to report what does not work. The production source
 remains private.
+
+<p align="center">
+  <img src="./assets/5thdev-github-features.png" alt="Evolving context that compounds. Provenance chain like no other. Continuity: shared, persistent context. Auditability: a provenance chain. Governance: rules future agents inherit." width="100%">
+</p>
 
 ## What you can use today
 
