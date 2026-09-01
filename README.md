@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
-  <a href="https://docs.5thdev.ai/"><img src="https://img.shields.io/badge/Docs-docs.5thdev.ai-white?style=for-the-badge&color=rgba(255,255,255,0)&labelColor=rgba(255,255,255,0)" alt="Documentation"></a>
-  <a href="https://discord.com/channels/1496699350439563347/"><img src="https://img.shields.io/badge/Discord-white?style=for-the-badge&logo=discord&logoColor=5865F2&color=rgba(255,255,255,0)&labelColor=rgba(255,255,255,0)" alt="Discord"></a>
-  <a href="https://www.cognisos.ai/"><img src="https://img.shields.io/badge/Built%20by-Cognisos-white?style=for-the-badge&color=rgba(255,255,255,0)&labelColor=rgba(255,255,255,0)" alt="Built by Cognisos"></a>
+  <a href="https://docs.5thdev.ai/"><img src="https://img.shields.io/badge/Docs-docs.5thdev.ai-e0e0e0?style=for-the-badge&color=e0e0e0&labelColor=e0e0e0" alt="Documentation"></a>
+  <a href="https://discord.com/channels/1496699350439563347/"><img src="https://img.shields.io/badge/Discord-e0e0e0?style=for-the-badge&logo=discord&logoColor=5865F2&color=e0e0e0&labelColor=e0e0e0" alt="Discord"></a>
+  <a href="https://www.cognisos.ai/"><img src="https://img.shields.io/badge/Built%20by-Cognisos-e0e0e0?style=for-the-badge&color=e0e0e0&labelColor=e0e0e0" alt="Built by Cognisos"></a>
 </p>
 
 <p align="center">
