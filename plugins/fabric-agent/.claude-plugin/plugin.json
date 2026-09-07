@@ -1,0 +1,19 @@
+{
+  "name": "fabric-agent",
+  "version": "0.1.3",
+  "description": "Governed coding workflows, evidence status, and continuity guidance for Fabric.",
+  "author": {
+    "name": "Cognisos",
+    "url": "https://www.cognisos.ai/"
+  },
+  "homepage": "https://5thdev.ai/",
+  "repository": "https://github.com/cognisos-ai/5thDev",
+  "keywords": [
+    "fabric",
+    "code-index",
+    "fractal",
+    "continuity",
+    "governance",
+    "mcp"
+  ]
+}

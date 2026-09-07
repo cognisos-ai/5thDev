@@ -1,0 +1,23 @@
+{
+  "schema_version": "cognisos.fabric-agent-export-provenance.v1",
+  "plugin": "fabric-agent",
+  "version": "0.1.3",
+  "distribution": "claude-code-skills-only",
+  "source_repository": "https://github.com/cognisos-ai/Prod_Fabric",
+  "source_revision": "19c3dc9ff71a4e2d16935dbeb99bc6515d486726",
+  "source_path": "plugins/fabric-agent",
+  "required_runtime": {
+    "package": "@cognisos/fabric-mcp",
+    "version": "0.2.0-rc.56.4"
+  },
+  "omitted_components": [
+    "hooks",
+    ".mcp.json"
+  ],
+  "files": {
+    ".claude-plugin/plugin.json": "1025a8175a130bb8e47a213c2096afba772a0b7196e871143614041fd86a7b44",
+    "README.md": "155d2501e8910816f1945f19ed871a0f18f67449c00e35dd0e6005d8652604dc",
+    "skills/fabric-agent/references/memory-lifecycle.md": "ea53c9bc9968751de62cad2363a430e3b1093457839506d7f59a625bdb4bd17e",
+    "skills/fabric-agent/SKILL.md": "57a5bfa710f9a8f87ded3de8ccd5bf416c35abe45f584803ed80d2fda701144c"
+  }
+}

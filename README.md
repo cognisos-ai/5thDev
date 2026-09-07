@@ -75,6 +75,23 @@ conversations can retain an older tool list even after a correct installation.
 For a repeatable fresh-machine check, use the
 [clean-machine validation guide](./docs/clean-machine-validation.md).
 
+## Add Fabric Agent to Claude Code
+
+Fabric Agent adds governed-work classification, evidence-status language, and
+continuity guidance to Claude Code. The first Claude package is skills-only:
+it uses your separately installed Fabric MCP `0.2.0-rc.56.4` and does not
+install hooks or another MCP server.
+
+```bash
+claude plugin marketplace add cognisos-ai/5thDev
+claude plugin install fabric-agent@5thdev
+```
+
+Restart Claude Code after installation so the skill and Fabric tools are
+discovered together. The public package is a deterministic export from the
+private release-authority repository; its `PROVENANCE.json` records the exact
+source revision and file digests.
+
 ## Local Fabric and Hosted Fabric
 
 | | Local Fabric — available in beta | Hosted / Shared Fabric — in development |
