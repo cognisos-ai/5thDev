@@ -78,9 +78,11 @@ For a repeatable fresh-machine check, use the
 ## Add Fabric Agent to Claude Code
 
 Fabric Agent adds governed-work classification, evidence-status language, and
-continuity guidance to Claude Code. The first Claude package is skills-only:
-it uses your separately installed Fabric MCP `0.2.0-rc.56.4` and does not
-install hooks or another MCP server.
+continuity guidance to Claude Code. Version `0.2.0` adds status, continuity,
+and governance commands plus opt-in metadata-only lifecycle observation across
+session, prompt, tool, completion, subagent, and compaction boundaries. It uses
+your separately installed Fabric MCP `0.2.0-rc.56.4` and does not install
+another MCP server.
 
 ```bash
 claude plugin marketplace add cognisos-ai/5thDev
@@ -88,9 +90,17 @@ claude plugin install fabric-agent@5thdev
 ```
 
 Restart Claude Code after installation so the skill and Fabric tools are
-discovered together. The public package is a deterministic export from the
-private release-authority repository; its `PROVENANCE.json` records the exact
-source revision and file digests.
+discovered together. Lifecycle observation is off by default and can be enabled
+from Fabric Agent's settings in `/plugin`. When enabled, it writes only
+allowlisted event metadata to Claude's local plugin-data directory; prompts,
+tool payloads and responses, transcripts, paths, file contents, errors, and
+credentials are excluded.
+
+The public package is a deterministic export from the private release-authority
+repository; its `PROVENANCE.json` records the exact source revision and file
+digests. See the plugin's
+[capability matrix](./plugins/fabric-agent/contracts/claude-capability-matrix.md)
+for its implemented and explicitly absent controls.
 
 ## Local Fabric and Hosted Fabric
 
