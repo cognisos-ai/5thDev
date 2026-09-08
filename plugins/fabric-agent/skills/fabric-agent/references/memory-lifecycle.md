@@ -28,6 +28,14 @@ remains content-free and separate from this memory workflow.
 | Tracked project exploration | optional | recall only when it can materially help |
 | Unrelated passive work | unnecessary | stay quiet |
 
+Every route above that invokes `fractal_recall` uses bounded retrieval scoped to
+the current project and task, requesting only the minimum results needed for
+the decision. `fractal_begin` and `fractal_rehydrate` are permitted only when
+`fractal_status` confirms that the route is available through an authorized
+write surface. Otherwise, do not call them: use `fractal_status` followed by
+bounded `fractal_recall` and report that the lifecycle acknowledgment is
+unavailable.
+
 An empty established store is honest genesis, not remembered context. If begin
 or rehydrate fails because bootstrap authority is absent, surface the failure
 once and do not retry blindly.

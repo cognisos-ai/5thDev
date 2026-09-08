@@ -60,13 +60,13 @@ machine.
 From the project you want Fabric to understand:
 
 ```bash
-npx -y @cognisos/fabric-mcp@beta-candidate setup
+npx -y @cognisos/fabric-mcp@0.2.0-rc.56.4 setup
 ```
 
 Complete the browser sign-in, then run:
 
 ```bash
-npx -y @cognisos/fabric-mcp@beta-candidate doctor
+npx -y @cognisos/fabric-mcp@0.2.0-rc.56.4 doctor
 ```
 
 Restart the MCP client you want to use and begin a **new conversation**. Existing
