@@ -4,7 +4,7 @@
   "version": "0.1.3",
   "distribution": "claude-code-skills-only",
   "source_repository": "https://github.com/cognisos-ai/Prod_Fabric",
-  "source_revision": "a71c4feab213b4c9ba8d6ca7c81840868e8e4a81",
+  "source_revision": "571868f0303fc40d0b216a2307ee4e204533a240",
   "source_path": "plugins/fabric-agent",
   "required_runtime": {
     "package": "@cognisos/fabric-mcp",
