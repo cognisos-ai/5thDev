@@ -1,13 +1,28 @@
 {
   "name": "fabric-agent",
-  "version": "0.1.3",
-  "description": "Governed coding workflows, evidence status, and continuity guidance for Fabric.",
+  "displayName": "Fabric Agent",
+  "version": "0.2.0",
+  "description": "Governed coding workflows, evidence status, continuity commands, and opt-in metadata-only lifecycle observation for Fabric.",
   "author": {
     "name": "Cognisos",
     "url": "https://www.cognisos.ai/"
   },
   "homepage": "https://5thdev.ai/",
   "repository": "https://github.com/cognisos-ai/5thDev",
+  "defaultEnabled": true,
+  "userConfig": {
+    "lifecycle_observation": {
+      "type": "boolean",
+      "title": "Lifecycle observation",
+      "description": "Write allowlisted lifecycle metadata to this plugin's local data directory. Prompt, tool payload, response, transcript, path, and file content are excluded.",
+      "default": false
+    }
+  },
+  "metadata": {
+    "productContractVersion": "1.0.0-draft.1",
+    "adapterStage": "public-beta-candidate",
+    "requiredFabricMcp": "0.2.0-rc.56.4"
+  },
   "keywords": [
     "fabric",
     "code-index",

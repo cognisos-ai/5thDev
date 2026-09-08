@@ -6,12 +6,12 @@ description: Classify coding work as passive, tracked, or governed; identify evi
 # Fabric Agent
 
 Apply the repository's Fabric Agent product contract while helping with coding
-work. The canonical source package includes a source-verified, default-off
-Codex lifecycle adapter for non-content session and compaction events.
-Distribution packages may be skills-only; inspect the installed package and
-claim only the components it actually contains. Exact installation, trust,
-native execution, and release support remain unproven until separately
-evidenced.
+work. The canonical source package includes source-verified, default-off
+lifecycle adapters. The Codex adapter observes non-content session and
+compaction events. The Claude Code public beta candidate adapter observes a broader lifecycle
+but persists only allowlisted metadata. Inspect the installed package and claim
+only the components it actually contains. Exact installation, trust, native
+execution, and release support remain unproven until separately evidenced.
 
 ## Product boundary
 
@@ -25,9 +25,10 @@ evidenced.
   actually exposes.
 - Keep experimental coordination separate from core memory, privacy,
   governance, evidence, and adapter readiness.
-- Never infer content capture from the lifecycle adapter. Its current hook
-  surface excludes prompts, tools, permissions, assistant messages, and
-  subagent output, and its local event log is opt-in.
+- Never infer content capture from a lifecycle adapter. The Claude adapter may
+  receive prompt, tool, assistant, error, and subagent fields from the harness,
+  but it discards them and persists only the allowlist documented in
+  `references/adapter-capabilities.md`. Every local event log is opt-in.
 
 ## Workflow
 
@@ -53,6 +54,11 @@ evidenced.
      packet and identities.
 7. End governed work with the result, evidence references, limitations,
    overrides, and a concise handoff when continuity is useful.
+
+Read `references/tool-routing.md` when code-index evidence, exact Fractal tool
+routing, or Shared Fabric boundaries matter. Read
+`references/adapter-capabilities.md` before making a hook, privacy, or
+cross-harness capability claim.
 
 ## Continuity boundary
 
