@@ -75,7 +75,7 @@ conversations can retain an older tool list even after a correct installation.
 For a repeatable fresh-machine check, use the
 [clean-machine validation guide](./docs/clean-machine-validation.md).
 
-## Add Fabric Agent to Claude Code
+## Claude Code Fabric Agent Plugin
 
 Fabric Agent adds governed-work classification, evidence-status language, and
 continuity guidance to Claude Code. The first Claude package is skills-only:
