@@ -1,0 +1,27 @@
+{
+  "name": "fabric-agent",
+  "version": "0.2.1+codex.20260908-selective-activation",
+  "description": "Prod_Fabric-owned governed workflow and continuity plugin for coding agents.",
+  "author": {
+    "name": "Prod_Fabric"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Fabric Agent",
+    "shortDescription": "Governed coding workflows with honest evidence status.",
+    "longDescription": "Fabric Agent provides Prod_Fabric-owned workflow classification, evidence language, governed continuity guidance, and opt-in metadata-only lifecycle observation. Claude Code public-beta-candidate assets are source-controlled beside the Codex adapter; runtime activation still requires explicit host trust and ready local memory authority.",
+    "developerName": "Prod_Fabric",
+    "category": "Productivity",
+    "capabilities": [
+      "Guidance",
+      "Workflow classification",
+      "Evidence status",
+      "Lifecycle observation"
+    ],
+    "defaultPrompt": [
+      "Classify this work and state its evidence requirements.",
+      "Show what is proven, blocked, and still missing.",
+      "Prepare a governed handoff for this coding session."
+    ]
+  }
+}

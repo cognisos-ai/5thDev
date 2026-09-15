@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fabric Agent"
+  short_description: "Govern coding work with honest evidence status"
+  default_prompt: "Classify this work, identify its evidence requirements, and state what is proven or blocked."

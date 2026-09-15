@@ -1,0 +1,20 @@
+{
+  "name": "5thdev",
+  "interface": {
+    "displayName": "5thDev Plugins"
+  },
+  "plugins": [
+    {
+      "name": "fabric-agent",
+      "source": {
+        "source": "local",
+        "path": "./plugins/fabric-agent"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

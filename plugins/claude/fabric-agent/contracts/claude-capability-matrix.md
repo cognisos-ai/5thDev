@@ -4,7 +4,7 @@ Stage: public beta candidate
 
 Product contract: `1.0.0-draft.1`
 
-Required runtime: Fabric MCP `0.2.0-rc.56.4`
+Required runtime: Fabric MCP `0.2.0-rc.56.5`
 
 | Lifecycle need | Claude native event | Current adapter behavior | Control | Status |
 |---|---|---|---|---|
