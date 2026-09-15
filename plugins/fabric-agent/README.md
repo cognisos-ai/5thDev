@@ -1,91 +1,54 @@
-# Fabric Agent for Claude Code
+# Fabric Agent for ChatGPT and Codex
 
 Fabric Agent adds governed-work classification, evidence-status language, and
-continuity guidance to Claude Code. Version `0.2.0` is the larger public beta
-candidate: it adds native status, continuity, and governance commands plus
-an opt-in metadata-only Claude lifecycle adapter.
+continuity guidance to supported ChatGPT and Codex plugin surfaces. This
+`0.2.1` candidate contains the shared Fabric Agent skill plus Codex-compatible,
+opt-in metadata-only lifecycle hooks.
 
-The package does not bundle another MCP server or handle credentials. Install
-and authenticate Fabric MCP separately, then start a new Claude Code session so
-the skill, commands, hooks, and Fabric tools are discovered together.
+The package does not bundle Fabric MCP or credentials. Install and authenticate
+Fabric MCP separately, then start a new conversation so the skill and available
+Fabric tools are discovered together.
 
 ## Requirement
 
-- Fabric MCP `0.2.0-rc.56.4`
+- Fabric MCP `0.2.0-rc.56.5`
 
-## Run the 0.2.0 candidate package
+## Candidate installation
 
-Export this package from the exact reviewed `Prod_Fabric` revision, then launch
-Claude Code with the resulting directory:
-
-```sh
-npm run export:fabric-agent-claude -- /absolute/path/to/artifacts/claude/fabric-agent
-FABRIC_AGENT_LIFECYCLE_LOG=1 claude --plugin-dir /absolute/path/to/artifacts/claude/fabric-agent
-```
-
-Run the launch command from the project whose Fabric MCP registration you want
-to exercise. The environment flag enables metadata-only lifecycle observation
-for that session; omit it to test the commands and skill with observation off.
-
-## Install from the 5thDev marketplace
-
-The commands below install the version currently published by 5thDev. Before a
-candidate's 5thDev release PR merges, they continue to resolve to the preceding
-public version. Confirm the selected version after installation rather than
-assuming candidate bytes are already public:
+The public 5thDev repository is the distribution boundary. A repository
+marketplace installation for Codex uses:
 
 ```sh
-claude plugin marketplace add cognisos-ai/5thDev
-claude plugin install fabric-agent@5thdev
+codex plugin marketplace add cognisos-ai/5thDev
+codex plugin add fabric-agent@5thdev
 ```
 
-Restart Claude Code after installation. In the new session, ask Claude to
-classify a coding task as passive, tracked, or governed, then confirm it can
-call the installed Fabric status tools.
+Start a new Codex session after installation. Review and trust the four
+Fabric Agent hook definitions before enabling lifecycle observation.
 
-## Commands
-
-- `/fabric-agent:fabric-status` checks the Code Indexer and Fractal memory
-  authority without conflating their daemon states.
-- `/fabric-agent:fabric-continuity` performs the bounded status, resume/recall,
-  and approved-finish workflow.
-- `/fabric-agent:fabric-govern` gathers code evidence and reports the honest
-  governance result for a proposed change.
+ChatGPT and Codex share the OpenAI plugin directory, but repository publication
+is not proof that this candidate has been accepted into that public directory.
+Web installation also does not deploy local hook scripts. Treat public-directory
+listing, MCP connection/authentication, local hook trust, and native hook firing
+as separate evidence gates.
 
 ## Lifecycle observation
 
-Lifecycle observation is off by default. To enable it, open `/plugin`, select
-Fabric Agent, configure `Lifecycle observation`, and reload plugins or start a
-new session. For a one-session development smoke, this equivalent environment
-flag is also supported:
+Lifecycle observation is off by default. For a one-session Codex smoke, launch:
 
 ```sh
-FABRIC_AGENT_LIFECYCLE_LOG=1 claude
+FABRIC_AGENT_LIFECYCLE_LOG=1 codex
 ```
 
-When enabled, Claude Code writes `fabric-agent-events-v1.jsonl` beneath the
-plugin's persistent data directory. The adapter observes session, prompt,
-tool, completion, subagent, and compaction boundaries, but persists only
-allowlisted metadata such as native event, opaque identifiers, tool name,
-outcome, duration, and compaction trigger. It does not persist prompts, tool
-inputs or responses, assistant or subagent messages, transcript paths, working
-directories, model names, file paths, file contents, errors, or credentials.
+When enabled, the hooks append only allowlisted session and compaction metadata
+to the harness-provided plugin data directory. They exclude working directories,
+transcript paths, prompts, tool input/output, assistant messages, model names,
+file paths, file contents, errors, and credentials. The hooks make no network
+requests and do not write Fractal memory.
 
-The hook is non-blocking and local-only. It never calls Fabric MCP, writes
-Fractal memory, starts a daemon, or makes a network request. Oversized or
-malformed events are skipped with a bounded debug warning. Disabling the option
-stops new observation; uninstalling the final plugin scope removes Claude's
-persistent plugin-data directory unless the user explicitly keeps it.
+## Evidence boundary
 
-This adapter is a public-beta-candidate source implementation. Installation and
-deterministic tests do not prove privacy across every product path, completion
-enforcement, cross-harness parity, or supported-release status. See
-`contracts/claude-capability-matrix.md` for the exact implemented and missing
-surface.
-
-## Package boundary
-
-`Prod_Fabric` is the implementation, verification, and release authority.
-This directory is a deterministic public export whose `PROVENANCE.json`
-records the exact source revision and file digests. The export includes the
-reviewed Claude adapter and intentionally omits Codex hooks and `.mcp.json`.
+`PROVENANCE.json` binds every exported file to the exact private Prod_Fabric
+source revision and SHA-256 digest. Deterministic export and manifest validation
+do not prove public-directory acceptance, installed activation, Fabric MCP
+readiness, cross-harness parity, or supported-release status.

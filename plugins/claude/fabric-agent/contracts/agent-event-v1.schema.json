@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:prod-fabric:fabric-agent:agent-event:v1",
+  "title": "Fabric Agent metadata event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "schema_version",
+    "contract_version",
+    "event_id",
+    "event_type",
+    "occurred_at",
+    "observed_at",
+    "source",
+    "context",
+    "authority",
+    "capability",
+    "degradation",
+    "payload"
+  ],
+  "properties": {
+    "schema": { "const": "prod_fabric.fabric_agent.agent-event" },
+    "schema_version": { "const": 1 },
+    "contract_version": { "const": "1.0.0-draft.1" },
+    "event_id": { "type": "string", "pattern": "^fabric-agent:[0-9a-f-]{36}$" },
+    "event_type": { "type": "string", "pattern": "^[a-z][a-z0-9_.-]{0,63}$" },
+    "occurred_at": { "type": "string", "format": "date-time" },
+    "observed_at": { "type": "string", "format": "date-time" },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["harness", "harness_version", "adapter_id", "adapter_version", "native_event", "transport", "observation"],
+      "properties": {
+        "harness": { "enum": ["claude_code", "codex"] },
+        "harness_version": { "type": "string", "minLength": 1, "maxLength": 64 },
+        "adapter_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+        "adapter_version": { "type": "string", "minLength": 1, "maxLength": 64 },
+        "native_event": { "type": "string", "minLength": 1, "maxLength": 64 },
+        "transport": { "const": "plugin_hook" },
+        "observation": { "const": "exact" }
+      }
+    },
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["session_id"],
+      "properties": {
+        "session_id": { "$ref": "#/$defs/stableId" },
+        "turn_id": { "$ref": "#/$defs/stableId" },
+        "prompt_id": { "$ref": "#/$defs/stableId" },
+        "tool_use_id": { "$ref": "#/$defs/stableId" },
+        "agent_id": { "$ref": "#/$defs/stableId" }
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "policy_refs"],
+      "properties": {
+        "mode": { "const": "individual" },
+        "policy_refs": { "type": "array", "maxItems": 0 }
+      }
+    },
+    "capability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode"],
+      "properties": { "mode": { "enum": ["observe", "advise"] } }
+    },
+    "degradation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reason_code", "missing_fields"],
+      "properties": {
+        "status": { "enum": ["full", "partial"] },
+        "reason_code": { "type": ["string", "null"], "maxLength": 64 },
+        "missing_fields": {
+          "type": "array",
+          "items": { "type": "string", "maxLength": 64 },
+          "uniqueItems": true
+        }
+      }
+    },
+    "payload": { "type": "object" }
+  },
+  "$defs": {
+    "stableId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,255}$"
+    }
+  }
+}

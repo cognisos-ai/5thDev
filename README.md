@@ -60,13 +60,13 @@ machine.
 From the project you want Fabric to understand:
 
 ```bash
-npx -y @cognisos/fabric-mcp@0.2.0-rc.56.4 setup
+npx -y @cognisos/fabric-mcp@0.2.0-rc.56.5 setup
 ```
 
 Complete the browser sign-in, then run:
 
 ```bash
-npx -y @cognisos/fabric-mcp@0.2.0-rc.56.4 doctor
+npx -y @cognisos/fabric-mcp@0.2.0-rc.56.5 doctor
 ```
 
 Restart the MCP client you want to use and begin a **new conversation**. Existing
@@ -75,13 +75,31 @@ conversations can retain an older tool list even after a correct installation.
 For a repeatable fresh-machine check, use the
 [clean-machine validation guide](./docs/clean-machine-validation.md).
 
+## ChatGPT and Codex Fabric Agent Plugin
+
+Fabric Agent `0.2.1` is packaged for the universal OpenAI plugin surface shared
+by supported ChatGPT and Codex experiences. The public candidate contains the
+shared governed-work skill and opt-in Codex lifecycle hooks; Fabric MCP remains
+a separate, authenticated prerequisite.
+
+```bash
+codex plugin marketplace add cognisos-ai/5thDev
+codex plugin add fabric-agent@5thdev
+```
+
+Start a new conversation after installation. Repository publication is not a
+claim that the candidate has been accepted into OpenAI's public plugin
+directory, and installing on the web does not deploy local hook scripts. The
+package's `PROVENANCE.json` binds its contents to the exact private
+release-authority source revision and file digests.
+
 ## Claude Code Fabric Agent Plugin
 
 Fabric Agent adds governed-work classification, evidence-status language, and
-continuity guidance to Claude Code. Version `0.2.0` adds status, continuity,
+continuity guidance to Claude Code. Version `0.2.1` includes status, continuity,
 and governance commands plus opt-in metadata-only lifecycle observation across
 session, prompt, tool, completion, subagent, and compaction boundaries. It uses
-your separately installed Fabric MCP `0.2.0-rc.56.4` and does not install
+your separately installed Fabric MCP `0.2.0-rc.56.5` and does not install
 another MCP server.
 
 ```bash
@@ -99,7 +117,7 @@ credentials are excluded.
 The public package is a deterministic export from the private release-authority
 repository; its `PROVENANCE.json` records the exact source revision and file
 digests. See the plugin's
-[capability matrix](./plugins/fabric-agent/contracts/claude-capability-matrix.md)
+[capability matrix](./plugins/claude/fabric-agent/contracts/claude-capability-matrix.md)
 for its implemented and explicitly absent controls.
 
 ## Local Fabric and Hosted Fabric

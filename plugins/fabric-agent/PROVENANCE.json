@@ -1,32 +1,26 @@
 {
   "schema_version": "cognisos.fabric-agent-export-provenance.v1",
   "plugin": "fabric-agent",
-  "version": "0.2.0",
-  "distribution": "claude-code-governed-public-beta-candidate",
+  "version": "0.2.1+codex.20260908-selective-activation",
+  "distribution": "openai-universal-plugin-source-candidate",
   "source_repository": "https://github.com/cognisos-ai/Prod_Fabric",
-  "source_revision": "787574da78becf0a32889be2138cb8656b0baa99",
+  "source_revision": "0ad54be7ce15fd77071f146c902717c894e9f1fa",
   "source_path": "plugins/fabric-agent",
-  "required_runtime": {
-    "package": "@cognisos/fabric-mcp",
-    "version": "0.2.0-rc.56.4"
-  },
   "omitted_components": [
-    "codex-hooks",
-    ".mcp.json"
+    "claude-code-distribution",
+    "fabric-mcp-runtime",
+    "credentials"
   ],
   "files": {
-    ".claude-plugin/plugin.json": "990d94379f277d3d74f6f7651158ecc990ef62d7c2b4af1a54d2ae0a0521364a",
-    "commands/fabric-continuity.md": "5ea05c1dc95f864f6a83934363bbdc18ca59a458f50591d8da2527b760e93e42",
-    "commands/fabric-govern.md": "cd758fe82a48ab0c422c4bbb8951fca8a3b86146c011aa635f599f5bbd78c44d",
-    "commands/fabric-status.md": "f5a3e56a433a50db13c18870e01b2c370068d7474c15df5a6f7b3fd7fbf81f1c",
+    ".codex-plugin/plugin.json": "2e2f519541334f051b4d630495d434d7cd9243cb11da72e125935e266d0c055f",
     "contracts/agent-event-v1.schema.json": "1fd42d319389fde53ea19abb7821c7bacb60b0043111d337371cdf02c5f08678",
-    "contracts/claude-capability-matrix.md": "2e24c49cef0d17417dbd18b04fa6984503d29962967fb2cc1cb128850059dd7a",
-    "hooks/claude-lifecycle.cjs": "443ca789ea2d24798ccba3239cbab3fb6d92f90c9d9388f0c933dd659face786",
-    "hooks/hooks.json": "361e4b4967b581483288048cbb1b597063b678927a67e67549208ec00dfa4036",
-    "README.md": "0c3a2208011d33536364fea0fd914fa6f1498eeb0e04776336572913e637ee83",
+    "hooks/codex-lifecycle.cjs": "3f870d1823483f9e9bf998c49464427d1586927233d572ae1fec5b2085accb7d",
+    "hooks/hooks.json": "751675dfb49d56b0d1f5305819fa0380a4a8c2d6700ca38db1f0cb6154b7ed1e",
+    "README.md": "d77a9dc06831401fbf10d4dd1df4388485c795eab75bd5306133b730c7c89f64",
+    "skills/fabric-agent/agents/openai.yaml": "e542682e79026e05e081a1267c19f8f79ab6e2cfa7a68adc377772097bf2bedf",
     "skills/fabric-agent/references/adapter-capabilities.md": "0c763a2b56bea462e6d219ee7b7683b441cb9075bcc7e3a7042788e1a56d3bd4",
-    "skills/fabric-agent/references/memory-lifecycle.md": "1c8362621ee8bca8c25ee37c54988ee6903d203d822cfd6119d8780bc593aaa4",
-    "skills/fabric-agent/references/tool-routing.md": "0db823cabe2242c1616b03b22c0515abf043370aba541b6dc91a92bb4be93921",
-    "skills/fabric-agent/SKILL.md": "9f7177c0a287655452c95b1e08c2e7d2728e164b09e14c7149b6b801c88cd727"
+    "skills/fabric-agent/references/memory-lifecycle.md": "9a2478199a2416e4a1b29e2ab36c70e688e03eec92765008450af7b693c76579",
+    "skills/fabric-agent/references/tool-routing.md": "0c67063d402abe2e273ecaf74e7de8e76eda28358fca6cc5b64db2486e51c213",
+    "skills/fabric-agent/SKILL.md": "ccd2d4581c8d2793818c8d7037808f5459310a3e23c19f16a3ecedfb16b17355"
   }
 }

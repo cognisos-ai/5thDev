@@ -1,7 +1,7 @@
 {
   "name": "fabric-agent",
   "displayName": "Fabric Agent",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Governed coding workflows, evidence status, continuity commands, and opt-in metadata-only lifecycle observation for Fabric.",
   "author": {
     "name": "Cognisos",
@@ -21,7 +21,7 @@
   "metadata": {
     "productContractVersion": "1.0.0-draft.1",
     "adapterStage": "public-beta-candidate",
-    "requiredFabricMcp": "0.2.0-rc.56.4"
+    "requiredFabricMcp": "0.2.0-rc.56.5"
   },
   "keywords": [
     "fabric",

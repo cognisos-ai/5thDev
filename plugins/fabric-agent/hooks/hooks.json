@@ -1,104 +1,15 @@
 {
+  "description": "Opt-in, content-free Fabric Agent lifecycle observation for Codex.",
   "hooks": {
     "SessionStart": [
       {
-        "matcher": "startup|resume|clear|compact|fork",
+        "matcher": "startup|resume|clear",
         "hooks": [
           {
             "type": "command",
-            "command": "node",
-            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/claude-lifecycle.cjs", "SessionStart"],
-            "timeout": 2,
-            "statusMessage": "Observing Fabric Agent session metadata"
-          }
-        ]
-      }
-    ],
-    "UserPromptSubmit": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node",
-            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/claude-lifecycle.cjs", "UserPromptSubmit"],
-            "timeout": 2
-          }
-        ]
-      }
-    ],
-    "PreToolUse": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node",
-            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/claude-lifecycle.cjs", "PreToolUse"],
-            "timeout": 2
-          }
-        ]
-      }
-    ],
-    "PostToolUse": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node",
-            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/claude-lifecycle.cjs", "PostToolUse"],
-            "timeout": 2
-          }
-        ]
-      }
-    ],
-    "PostToolUseFailure": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node",
-            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/claude-lifecycle.cjs", "PostToolUseFailure"],
-            "timeout": 2
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node",
-            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/claude-lifecycle.cjs", "Stop"],
-            "timeout": 2
-          }
-        ]
-      }
-    ],
-    "SubagentStart": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node",
-            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/claude-lifecycle.cjs", "SubagentStart"],
-            "timeout": 2
-          }
-        ]
-      }
-    ],
-    "SubagentStop": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node",
-            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/claude-lifecycle.cjs", "SubagentStop"],
-            "timeout": 2
+            "command": "node \"${PLUGIN_ROOT}/hooks/codex-lifecycle.cjs\" SessionStart",
+            "timeout": 3,
+            "statusMessage": "Observing Fabric Agent session lifecycle"
           }
         ]
       }
@@ -109,9 +20,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node",
-            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/claude-lifecycle.cjs", "PreCompact"],
-            "timeout": 2
+            "command": "node \"${PLUGIN_ROOT}/hooks/codex-lifecycle.cjs\" PreCompact",
+            "timeout": 3
           }
         ]
       }
@@ -122,22 +32,20 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node",
-            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/claude-lifecycle.cjs", "PostCompact"],
-            "timeout": 2
+            "command": "node \"${PLUGIN_ROOT}/hooks/codex-lifecycle.cjs\" PostCompact",
+            "timeout": 3
           }
         ]
       }
     ],
     "SessionEnd": [
       {
-        "matcher": "clear|resume|logout|prompt_input_exit|other",
+        "matcher": "other",
         "hooks": [
           {
             "type": "command",
-            "command": "node",
-            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/claude-lifecycle.cjs", "SessionEnd"],
-            "timeout": 1
+            "command": "node \"${PLUGIN_ROOT}/hooks/codex-lifecycle.cjs\" SessionEnd",
+            "timeout": 3
           }
         ]
       }

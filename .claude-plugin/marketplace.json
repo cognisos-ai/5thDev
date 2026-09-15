@@ -8,9 +8,9 @@
   "plugins": [
     {
       "name": "fabric-agent",
-      "source": "./plugins/fabric-agent",
+      "source": "./plugins/claude/fabric-agent",
       "description": "Governed coding workflows, evidence status, continuity commands, and opt-in metadata-only lifecycle observation for Fabric.",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "author": {
         "name": "Cognisos"
       },
