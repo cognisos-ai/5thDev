@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [{ "command": "node \"${CURSOR_PLUGIN_ROOT}/distribution/cursor/hooks/cursor-lifecycle.cjs\" sessionStart", "timeout": 2 }],
+    "sessionEnd": [{ "command": "node \"${CURSOR_PLUGIN_ROOT}/distribution/cursor/hooks/cursor-lifecycle.cjs\" sessionEnd", "timeout": 2 }],
+    "preToolUse": [{ "command": "node \"${CURSOR_PLUGIN_ROOT}/distribution/cursor/hooks/cursor-lifecycle.cjs\" preToolUse", "timeout": 2 }],
+    "postToolUse": [{ "command": "node \"${CURSOR_PLUGIN_ROOT}/distribution/cursor/hooks/cursor-lifecycle.cjs\" postToolUse", "timeout": 2 }],
+    "postToolUseFailure": [{ "command": "node \"${CURSOR_PLUGIN_ROOT}/distribution/cursor/hooks/cursor-lifecycle.cjs\" postToolUseFailure", "timeout": 2 }],
+    "subagentStart": [{ "command": "node \"${CURSOR_PLUGIN_ROOT}/distribution/cursor/hooks/cursor-lifecycle.cjs\" subagentStart", "timeout": 2 }],
+    "subagentStop": [{ "command": "node \"${CURSOR_PLUGIN_ROOT}/distribution/cursor/hooks/cursor-lifecycle.cjs\" subagentStop", "timeout": 2 }],
+    "preCompact": [{ "command": "node \"${CURSOR_PLUGIN_ROOT}/distribution/cursor/hooks/cursor-lifecycle.cjs\" preCompact", "timeout": 2 }],
+    "stop": [{ "command": "node \"${CURSOR_PLUGIN_ROOT}/distribution/cursor/hooks/cursor-lifecycle.cjs\" stop", "timeout": 2 }]
+  }
+}

@@ -88,3 +88,32 @@ Open a [GitHub issue](https://github.com/cognisos-ai/5thDev/issues) with:
 
 Never attach API keys, OAuth codes, bearer tokens, keychain contents, private
 source, full environment dumps, or unredacted registration files.
+
+## Cursor repository-install check
+
+This check is separate from the local MCP setup above. Use a fresh Cursor
+session in a small test repository with a healthy Fabric MCP connector. Record
+the Cursor version, the 5thDev repository commit, and the installed Fabric Agent
+version before making capability claims.
+
+1. In Cursor Customize, choose **From GitHub Repository** and import the
+   published `https://github.com/cognisos-ai/5thDev` repository. Install
+   `fabric-agent` at a chosen user or project scope. A copied package under
+   `~/.cursor/plugins/local` does not exercise this path.
+2. Confirm Cursor lists the installed plugin, its skill, and its hook entries.
+   This establishes discovery, not execution.
+3. In a new session, ask for a read-only Fabric status, symbol lookup, and
+   impact explanation in the test repository. Verify the returned project
+   scope and freshness against the checkout. Do not count a source-only unit
+   test or an empty query as the positive control.
+4. For an opt-in native-hook check, launch Cursor with
+   `FABRIC_AGENT_LIFECYCLE_LOG=1` and set `FABRIC_AGENT_CURSOR_LOG_DIR` to a
+   dedicated absolute directory owned by the current user with mode `0700`.
+   Trigger a harmless session and tool event, then inspect the resulting
+   `fabric-agent-events-v1.jsonl` for expected event types and absence of
+   prompts, tool payloads, file paths, and credentials. Logging is off without
+   both settings; remove the test directory separately after inspection.
+5. Record any missing hooks, install errors, stale marketplace revisions, or
+   account-policy restrictions as unproven. Do not infer public Cursor approval,
+   full lifecycle coverage, Fabric Recorded, Evidence Complete, or Fabric
+   Verified from a successful install.

@@ -1,0 +1,26 @@
+{
+  "schema_version": "prod_fabric.fabric-agent-export-provenance.v1",
+  "plugin": "fabric-agent",
+  "distribution": "cursor-source-candidate",
+  "version": "0.2.1",
+  "source_repository": "Prod_Fabric",
+  "source_revision": "e67e68ce3887c51a71dc1aa9944cd6f440ed54c1",
+  "source_path": "plugins/fabric-agent",
+  "omitted_components": [
+    "codex-hooks",
+    "claude-hooks",
+    "mcp.json"
+  ],
+  "files": {
+    ".cursor-plugin/plugin.json": "4341fbd346cabbc1b7f147fdc1b799e87715cb4ca2450e52c8117ee33dfb2aa5",
+    "README.md": "0241506ea7cadddb25112c0ef0fb63728ef1febf0925e35c5b2d3c613bc75c5a",
+    "distribution/cursor/hooks/hooks.json": "738f0c011a4f68da28aa0a42440f6314d7378f13e116d713faad0bd9a6ef1385",
+    "distribution/cursor/hooks/cursor-lifecycle.cjs": "a676a51f22f8ae46b9938143f6be79135c88619398dd32db5afc043491187329",
+    "contracts/agent-event-v1.schema.json": "7a54f5abc2fbce5f679216d2d6187de17eb9be4d8b725c98e176b474bac9053e",
+    "contracts/cursor-capability-matrix.md": "789e5d86d6c232bebb35cd10e1260197723fd4aa53f7be1efe6455a9f7925c4e",
+    "skills/fabric-agent/SKILL.md": "0f30cb6246d0640e77df667976f9bc1e3d00f1041533e62c0bb28e73ac209e85",
+    "skills/fabric-agent/references/adapter-capabilities.md": "b40034be1f9fe2f7fa0ae1aa585d8bdf9eda11f1147294b52277e7b82d42168e",
+    "skills/fabric-agent/references/memory-lifecycle.md": "a2ad3b4b2ac5afd0093259e38a70980ad3e6cf5bf8fb849a8218144b35ea8f8c",
+    "skills/fabric-agent/references/tool-routing.md": "ef191ad731008356558a3775bc4fcd9d9515fbfc8d9e6d9a1e49c1d25aa99b69"
+  }
+}
