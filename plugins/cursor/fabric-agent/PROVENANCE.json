@@ -4,7 +4,7 @@
   "distribution": "cursor-source-candidate",
   "version": "0.2.1",
   "source_repository": "Prod_Fabric",
-  "source_revision": "1b74b6fc4bb0d41d680d2f17e365c61987e8c22b",
+  "source_revision": "e67e68ce3887c51a71dc1aa9944cd6f440ed54c1",
   "source_path": "plugins/fabric-agent",
   "omitted_components": [
     "codex-hooks",
