@@ -129,16 +129,15 @@ Fabric MCP must be installed and authenticated separately. Its
 exact source revision and file digests. Publication in this repository does not
 mean that Cursor has listed or approved it in its public marketplace.
 
-To test installation from this repository with a Cursor Team or Enterprise
-marketplace, use **Dashboard → Plugins & MCPs → Team Marketplaces → Add
-Marketplace → Import from Repo** and enter
-`https://github.com/cognisos-ai/5thDev`. Refresh the marketplace after the
-repository changes, then install **fabric-agent** from **Customize** at user or
-project scope. Start a new Cursor session in a project where Fabric MCP is
-already healthy. See the [clean-machine validation guide](./docs/clean-machine-validation.md)
-for the checks that distinguish repository installation from native hook
-execution. Direct repository-install behavior may differ by Cursor version; do
-not treat an export or local copy as proof that the marketplace path works.
+To test the solo-user repository path, open **Customize → From GitHub
+Repository**, enter `https://github.com/cognisos-ai/5thDev`, and install
+**fabric-agent** at user or project scope. Start a new Cursor session in a
+project where Fabric MCP is already healthy. A team marketplace is not needed
+for this test. See the
+[clean-machine validation guide](./docs/clean-machine-validation.md) for the
+checks that distinguish repository installation from native hook execution.
+Do not treat an export or local copy as proof that the GitHub-repository path
+works.
 
 ## Local Fabric and Hosted Fabric
 

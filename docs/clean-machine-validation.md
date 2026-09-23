@@ -96,9 +96,9 @@ session in a small test repository with a healthy Fabric MCP connector. Record
 the Cursor version, the 5thDev repository commit, and the installed Fabric Agent
 version before making capability claims.
 
-1. Import the published 5thDev repository into a Cursor Team or Enterprise
-   marketplace, refresh it, and install `fabric-agent` from Customize at a
-   chosen user or project scope. A copied package under
+1. In Cursor Customize, choose **From GitHub Repository** and import the
+   published `https://github.com/cognisos-ai/5thDev` repository. Install
+   `fabric-agent` at a chosen user or project scope. A copied package under
    `~/.cursor/plugins/local` does not exercise this path.
 2. Confirm Cursor lists the installed plugin, its skill, and its hook entries.
    This establishes discovery, not execution.
