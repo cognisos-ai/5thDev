@@ -1,0 +1,8 @@
+{
+  "name": "fabric-agent",
+  "version": "0.2.1",
+  "description": "Prod_Fabric-owned governed continuity guidance and opt-in metadata-only Cursor lifecycle observation.",
+  "author": { "name": "Prod_Fabric" },
+  "skills": "./skills/",
+  "hooks": "./distribution/cursor/hooks/hooks.json"
+}

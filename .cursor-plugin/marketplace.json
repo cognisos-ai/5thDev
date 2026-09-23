@@ -1,0 +1,16 @@
+{
+  "name": "5thdev",
+  "owner": {
+    "name": "Cognisos"
+  },
+  "metadata": {
+    "description": "Official 5thDev plugins for supported coding agents."
+  },
+  "plugins": [
+    {
+      "name": "fabric-agent",
+      "source": "plugins/cursor/fabric-agent",
+      "description": "Governed coding guidance and opt-in metadata-only lifecycle observation for Fabric in Cursor."
+    }
+  ]
+}
